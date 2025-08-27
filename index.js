@@ -61,3 +61,31 @@ for (const btn of copyBtns) {
 document.getElementById("clear-btn").addEventListener("click", function () {
   document.getElementById("history-container").innerText = "";
 });
+
+
+// bar btn
+
+document.getElementById("bar-btn").addEventListener("click", function () {
+  const div = document.getElementById("count-btns");
+  div.classList.remove("hidden");
+  div.classList.add("absolute", "bg-white", "flex", "flex-col", "top-0", "left-0", "h-[250px]", "w-[200px]","py-4", "px-3");
+  document.getElementById("cross-btn").classList.remove("hidden")
+  document.getElementById("cross-btn").classList.add("block");
+  document.getElementById("bar-btn").classList.remove("block");
+  document.getElementById("bar-btn").classList.add("hidden");
+})
+
+
+// toggle
+document.getElementById("cross-btn").addEventListener("click", function () {
+  const div = document.getElementById("count-btns");
+  
+  div.classList.remove("absolute", "bg-white", "flex", "flex-col", "top-0", "left-0", "h-[250px]", "w-[200px]","py-4", "px-3");
+  div.classList.add("hidden");
+  
+  document.getElementById("cross-btn").classList.remove("block");
+  document.getElementById("cross-btn").classList.add("hidden")
+  document.getElementById("bar-btn").classList.remove("hidden");
+  document.getElementById("bar-btn").classList.add(" block");
+})
+
